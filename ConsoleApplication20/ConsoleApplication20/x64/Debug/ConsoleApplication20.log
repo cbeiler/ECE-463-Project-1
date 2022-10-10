@@ -10,55 +10,55 @@ c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\
 c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(98): warning C4018: '<': signed/unsigned mismatch
 c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(116): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
 c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(117): warning C4018: '<': signed/unsigned mismatch
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(159): warning C4018: '<': signed/unsigned mismatch
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(172): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(174): warning C4018: '<': signed/unsigned mismatch
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(206): warning C4018: '<': signed/unsigned mismatch
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(220): warning C4244: 'argument': conversion from '__int64' to 'uint32_t', possible loss of data
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(333): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(333): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(333): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(333): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(334): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(334): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(334): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(334): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(335): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(335): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(335): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(335): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(336): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(336): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(336): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(336): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(337): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type '__int64'
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(338): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(338): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(338): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(338): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(340): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(340): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(340): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(340): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(341): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(341): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(341): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(341): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(344): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(344): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(344): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(344): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(345): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(345): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(345): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(345): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(346): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type '__int64'
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(347): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(347): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(347): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(347): note: consider using '%I64u' in the format string
-c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(349): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(349): note: consider using '%llu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(349): note: consider using '%Iu' in the format string
-  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(349): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(173): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(175): warning C4018: '<': signed/unsigned mismatch
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(221): warning C4244: 'argument': conversion from '__int64' to 'uint32_t', possible loss of data
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(350): warning C4018: '<': signed/unsigned mismatch
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(361): warning C4018: '<': signed/unsigned mismatch
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(372): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(372): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(372): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(372): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(373): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(373): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(373): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(373): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(374): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(374): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(374): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(374): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(375): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(375): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(375): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(375): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(376): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type '__int64'
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(377): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(377): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(377): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(377): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(379): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(379): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(379): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(379): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(380): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(380): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(380): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(380): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(383): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(383): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(383): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(383): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(384): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(384): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(384): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(384): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(385): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type '__int64'
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(386): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(386): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(386): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(386): note: consider using '%I64u' in the format string
+c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(388): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type '__int64'
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(388): note: consider using '%llu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(388): note: consider using '%Iu' in the format string
+  c:\users\chandler beiler\source\repos\consoleapplication20\consoleapplication20\sim.cpp(388): note: consider using '%I64u' in the format string
   ConsoleApplication20.vcxproj -> C:\Users\Chandler Beiler\source\repos\ConsoleApplication20\x64\Debug\ConsoleApplication20.exe

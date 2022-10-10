@@ -48,7 +48,7 @@ Block::Block(uint32_t setAssoc) {
 void Cache::print() {
 	for (int i = 0; i < numSets; i++) {
 		for (int j = 0; j < setAssoc; j++) {
-			printf("%x %d  ", blocks[i][j]->tag, blocks[i][j]->lru);//debug porpoises
+			printf("%x %d %x ", blocks[i][j]->tag, blocks[i][j]->lru, blocks[i][j]->dirty);//debug porpoises
 		}
 		printf("\n");
 	}
@@ -124,7 +124,7 @@ void Cache::readRequest(uint32_t address) {
 		hits++;
 		readHits++;
 		setNum = updateLRU(tag, index, hit);
-		blocks[index][setNum]->dirty = 1;
+		blocks[index][setNum]->dirty = 0xD;
 	}
 	else {
 		//miss
@@ -133,7 +133,7 @@ void Cache::readRequest(uint32_t address) {
 		setNum = updateLRU(tag, index, hit);
 
 		if (level == 1) {
-			if (this->blocks[index][setNum]->dirty == 1) {
+			if (this->blocks[index][setNum]->dirty == 0xD) {
 				this->next->writeRequest(blocks[index][setNum]->address);
 				writebacks++;
 			}
@@ -142,24 +142,25 @@ void Cache::readRequest(uint32_t address) {
 		}
 		else if(level ==2){
 			//L2 read miss, memory read request
-			if (this->blocks[index][setNum]->dirty == 1)
+			if (this->blocks[index][setNum]->dirty == 0xD)
 				writebacks++;
 			readMisses++;
 			memReads++;
 			;
 		}
-		//INSTALL BLOCK
+		//INSTALL BLOCK clean
 		
 		blocks[index][setNum]->address = address;
 		blocks[index][setNum]->valid = 1;
 		blocks[index][setNum]->tag = tag;
+		blocks[index][setNum]->dirty = 0xC;
 	}
 
-	printf("set %x: ", index);
-	for (int j = 0; j < setAssoc; j++) {
-		printf(" %x %d  ", blocks[index][j]->tag, blocks[index][j]->lru);//debug porpoises
-	}
-	printf("\n");
+	//printf("set %x: ", index);
+	//for (int j = 0; j < setAssoc; j++) {
+	//	printf(" %x %d %x ", blocks[index][j]->tag, blocks[index][j]->lru, blocks[index][j]->dirty);//debug porpoises
+	//}
+	//printf("\n");
 }
 
 //not done
@@ -181,7 +182,7 @@ void Cache::writeRequest(uint32_t address) {
 		hits++;
 		writeHits++;
 		setNum = updateLRU(tag, index, hit);
-		blocks[index][setNum]->dirty = 1;
+		blocks[index][setNum]->dirty = 0xD;
 	}
 	else {
 		misses++;
@@ -198,15 +199,15 @@ void Cache::writeRequest(uint32_t address) {
 		blocks[index][setNum]->address = address;
 		blocks[index][setNum]->valid = 1;
 		blocks[index][setNum]->tag = tag;
-		blocks[index][setNum]->dirty = 1;
+		blocks[index][setNum]->dirty = 0xD;
 
 		
 	}
-	printf("set %x: ", index);
-	for (int j = 0; j < setAssoc; j++) {
-		printf(" %x %d  ", blocks[index][j]->tag, blocks[index][j]->lru);//debug porpoises
-	}
-	printf("\n");
+	//printf("set %x: ", index);
+	//for (int j = 0; j < setAssoc; j++) {
+	//	printf(" %x %d %x ", blocks[index][j]->tag, blocks[index][j]->lru, blocks[index][j]->dirty);//debug porpoises
+	//}
+	//printf("\n");
 }
 
 void Cache::incHits() {
@@ -242,13 +243,13 @@ int main(int argc, char *argv[]) {
 	//DEBUG SETUP
 
 	char blocksize[3] = "16";//32
-	char l1size[6] = "256";//8192
+	char l1size[6] = "1024";//8192
 	char l1assoc[5] = "1";
 	char l2size[10] = "8192";// "262144";
-	char l2assoc[5] = "2";
-	char prefn[5] = "3";
-	char prefm[5] = "10";
-	char trcfile[25] = "../example_trace.txt";
+	char l2assoc[5] = "4";
+	char prefn[5] = "0";
+	char prefm[5] = "0";
+	char trcfile[25] = "../gcc_trace.txt";
 	argc = 9;
 	argv[1] = blocksize;
 	argv[2] = l1size;
@@ -309,12 +310,12 @@ int main(int argc, char *argv[]) {
 	// Read requests from the trace file and echo them back.
 	while (fscanf(fp, "%c %x\n", &rw, &addr) == 2) {	// Stay in the loop if fscanf() successfully parsed two tokens as specified.
 		if (rw == 'r') {
-			printf(" r %x ===================================\n", addr);
+			//printf(" r %x ===================================\n", addr);
  			cache[0]->readRequest(addr);//printf("r %x\n", addr);
 			//cache[0]->print();
 		}
 		else if (rw == 'w') {
-			printf(" w %x ===================================\n", addr);
+			//printf(" w %x ===================================\n", addr);
 			cache[0]->writeRequest(addr);//printf("r %x\n", addr);
 			//cache[0]->print();
 			//printf("===== Simulator configuration =====\n");
@@ -330,24 +331,7 @@ int main(int argc, char *argv[]) {
 			
 		}
 		else if (rw == 'x') {
-			/*a*/printf("%u, ", cache[0]->reads);
-			/*b*/printf("%u, ", cache[0]->readMisses);
-			/*c*/printf("%u, ", cache[0]->writes);
-			/*d*/printf("%u, ", cache[0]->writeMisses);
-			/*e*/printf("%f, ", (cache[0]->readMisses + cache[0]->writeMisses)/(cache[0]->reads + cache[0]->writes));
-			/*f*/printf("%u, ", cache[0]->writebacks);
-			/*g*/printf("%u, ", 0);
-			/*h*/printf("%u, ", cache[1]->reads);
-			/*i*/printf("%u, ", cache[1]->readMisses);
-			/*j*/printf("%u, ", 0);
-			/*k*/printf("%u, ", 0);
-			/*l*/printf("%u, ", cache[1]->writes);
-			/*m*/printf("%u, ", cache[1]->writeMisses);
-			/*n*/printf("%f, ", (cache[1]->readMisses) / (cache[1]->reads));
-			/*o*/printf("%u, ", cache[1]->writebacks);
-			/*p*/printf("%u, ", 0);
-			/*q*/printf("%u, \n", cache[0]->memReads+cache[0]->memWrites + cache[1]->memReads + cache[1]->memWrites);
-			int i = 0;
+			
 
 
 		}
@@ -361,6 +345,47 @@ int main(int argc, char *argv[]) {
 		///////////////////////////////////////////////////////
 	}
 
+	for (int i = 0; i < cache[0]->numSets; i++) {
+		printf("set\t%d:\t",i);
+		for (int j = 0; j < cache[0]->setAssoc; j++) {
+			if (cache[0]->blocks[i][j]->dirty != 0xC)
+				printf("%u %x\t", cache[0]->blocks[i][j]->tag, cache[0]->blocks[i][j]->dirty);
+			else
+				printf("%x\t\t", cache[0]->blocks[i][j]->tag);
+		}
+		printf("\n");
+
+	}
+	for (int i = 0; i < cache[1]->numSets; i++) {
+		printf("set\t%d:\t",i);
+		for (int j = 0; j < cache[1]->setAssoc; j++) {
+			if(cache[1]->blocks[i][j]->dirty != 0xC)
+				printf("%u %x\t", cache[1]->blocks[i][j]->tag, cache[1]->blocks[i][j]->dirty);
+			else 
+				printf("%x\t\t", cache[1]->blocks[i][j]->tag);
+		}
+		printf("\n");
+
+	}
+	printf("===== Measurements =====\n");
+
+	/*a*/printf("a. L1 reads: \t\t\t%u\n", cache[0]->reads);
+	/*b*/printf("b. L1 read misses:\t\t%u\n", cache[0]->readMisses);
+	/*c*/printf("c. L1 writes:\t\t\t%u\n", cache[0]->writes);
+	/*d*/printf("d. L1 write misses:\t\t%u\n", cache[0]->writeMisses);
+	/*e*/printf("e. L1 miss rate:\t\t%f\n", (cache[0]->readMisses + cache[0]->writeMisses)/(cache[0]->reads + cache[0]->writes));
+	/*f*/printf("f. L1 writebacks:\t\t%u\n", cache[0]->writebacks);
+	/*g*/printf("g. L1 prefetches:\t\t%u\n", 0);
+	/*h*/printf("h. L2 reads (demand):\t\t%u\n", cache[1]->reads);
+	/*i*/printf("i. L2 read misses (demand):\t%u\n", cache[1]->readMisses);
+	/*j*/printf("j. L2 reads (prefetch):\t\t%u\n", 0);
+	/*k*/printf("k. L2 read misses (prefetch):\t%u\n", 0);
+	/*l*/printf("l. L2 writes:\t\t\t%u\n", cache[1]->writes);
+	/*m*/printf("m. L2 write misses:\t\t%u\n", cache[1]->writeMisses);
+	/*n*/printf("n. L2 miss rate:\t\t%f\n", (cache[1]->readMisses) / (cache[1]->reads));
+	/*o*/printf("o. L2 writebacks:\t\t%u\n", cache[1]->writebacks);
+	/*p*/printf("p. L2 prefetches:\t\t%u\n", 0);
+	/*q*/printf("q. memory traffic:\t\t%u\n", cache[0]->memReads + cache[0]->memWrites + cache[1]->memReads + cache[1]->memWrites);
 	return(0);
 }
 
